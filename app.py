@@ -13,7 +13,7 @@ st.set_page_config(
     layout="centered",
 )
 
-st.title("Predicción de riesgo actuarial - Carlos Enamorado PTI-0620")
+st.title("Predicción de riesgo actuarial - Jordy Orellana PTI-0620")
 st.write(
     "Ingrese los datos solicitados para estimar el nivel de riesgo actuarial."
 )
