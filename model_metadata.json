@@ -1,5 +1,20 @@
 {
     "proyecto": "Riesgo actuarial con K-means y SVM",
+    "variables": ["age", "bmi", "children", "charges", "sex", "smoker", "region"],
+    "mapa_riesgo": {
+        "1": "Bajo",
+        "2": "Medio",
+        "0": "Alto"
+    },
+    "configuracion_variables": {
+        "age": {"tipo": "int", "min": 18, "max": 100, "default": 30, "etiqueta": "Edad"},
+        "bmi": {"tipo": "float", "min": 10.0, "max": 60.0, "default": 25.0, "etiqueta": "Indice de masa corporal (BMI)"},
+        "children": {"tipo": "int", "min": 0, "max": 10, "default": 0, "etiqueta": "Numero de hijos"},
+        "charges": {"tipo": "float", "min": 0.0, "max": 100000.0, "default": 10000.0, "etiqueta": "Cargos medicos"},
+        "sex": {"opciones": ["male", "female"], "etiqueta": "Sexo"},
+        "smoker": {"opciones": ["yes", "no"], "etiqueta": "Fumador"},
+        "region": {"opciones": ["southwest", "southeast", "northwest", "northeast"], "etiqueta": "Region"}
+    },
     "kmeans": {
         "n_clusters": 3,
         "silhouette": 0.178,
@@ -18,21 +33,6 @@
         },
         "accuracy_test": 0.9224
     },
-    "features_kmeans": [
-        "age",
-        "bmi",
-        "children",
-        "charges",
-        "sex",
-        "smoker",
-        "region"
-    ],
-    "features_svm": [
-        "age",
-        "bmi",
-        "children",
-        "sex",
-        "smoker",
-        "region"
-    ]
+    "features_kmeans": ["age", "bmi", "children", "charges", "sex", "smoker", "region"],
+    "features_svm": ["age", "bmi", "children", "sex", "smoker", "region"]
 }
